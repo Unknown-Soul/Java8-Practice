@@ -1,0 +1,40 @@
+1.  Lambda  and Stream
+    .   Method Reference
+2.  Understand Functional Interface
+3.  Consumer, Predictor ,Functional And Supplier
+4.  Stream intermediate/Terminal Operations
+5.  Learn using Fp with Files and Threads
+6.  Parallelized Function
+
+
+-------------------------------
+::  =   Method Reference        //can be used on static method only
+--------------------------------
+Example 1:
+    EmployeeFunctionalInterface employeeFunctionalInterface= ((name, age) -> new Employee(name,age));
+    System.out.println(employeeFunctionalInterface.createEmployee("Pulkit",28));
+
+
+() =  function without name
+
+Example2:
+        MyInterface4 myInterface41 = () -> System.out.println(this.myVar);
+
+-----------------------------
+Functional Interface have only one method.
+
+
+Java has introduced functional programming support in Java release version 8. This specific release has also introduced several new concepts notably lambda expressions, method reference and a plethora of functional interfaces. While discussing functional interfaces, there are few functional interfaces namely Consumer, Supplier, Predicate and Functions are most crucial. In this article, we will talk about these interfaces.
+
+
+Consumer
+A Consumer is a functional interface that accepts a single input and returns no output.
+
+The accept method is the Single Abstract Method (SAM) which accepts a single argument of type T.
+
+
+Supplier
+A Supplier is a simple interface which indicates that this implementation is a supplier of results. This interface, however, does not enforce any restrictions that supplier implementation needs to return a different result on each invocation.
+
+Predicate
+A Predicate interface represents a boolean-valued-function of an argument. This is mainly used to filter data from a Java Stream.
